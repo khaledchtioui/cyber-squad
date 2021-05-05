@@ -3,6 +3,11 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
+/**
+* @struct minimap 
+* @brief structure mini map 
+
+*/
 typedef struct 
 {SDL_Surface *map;
 SDL_Surface  *minijoueur;

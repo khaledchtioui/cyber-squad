@@ -1,10 +1,24 @@
+/**
+ * @file collision.c
+ * @brief la collision
+ * @author idriss ben younes
+ * @version 0.1
+ * @date 05/05/2021 
+
+*/
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 #include <SDL/SDL_image.h>
 #include "collision.h"
 
 
-
+/**
+* @brief GetPixel
+* @param pSurface the screen
+* @param x int 
+* @param y int 
+* @return SDL_Color
+*/
 
 SDL_Color GetPixel(SDL_Surface *pSurface ,int x,int y)
 {SDL_Color color;
@@ -17,6 +31,13 @@ memcpy (&col,pPosition,pSurface ->format ->BytesPerPixel);
 SDL_GetRGB(col,pSurface -> format,&color.r ,&color.g ,&color.b);
 return (color);
 }
+
+/**
+* @brief collision_parfaite_right
+* @param mask  the screen
+* @param posjoueur position joueur
+* @return int
+*/
 int collision_parfaite_right(SDL_Surface *mask , SDL_Rect posjoueur )
 {  SDL_Color col,colp;
 SDL_Rect pos[8];
@@ -49,6 +70,13 @@ if((col.r==colp.r) && (col.g == colp.g) && (col.b ==colp.b))
 collision = 1;}
 return (collision);
 }
+
+/**
+* @brief collision_parfaite_left
+* @param mask  the screen
+* @param posjoueur position joueur
+* @return int
+*/
 int collision_parfaite_left(SDL_Surface *mask, SDL_Rect posjoueur)
 {
 SDL_Color col,colp;
@@ -83,7 +111,12 @@ collision = 1;}
 return (collision);
 }
 
-
+/**
+* @brief collision_parfaite_up
+* @param mask  the screen
+* @param posjoueur position joueur
+* @return int
+*/
 int collision_parfaite_up(SDL_Surface *mask, SDL_Rect posjoueur)
 {
 SDL_Color col,colp;
@@ -121,6 +154,12 @@ if((col.r==colp.r) && (col.g == colp.g) && (col.b ==colp.b))
 collision = 1;}
 return (collision);
 }
+/**
+* @brief collision_parfaite_down
+* @param mask  the screen
+* @param posjoueur position joueur
+* @return int
+*/
 
 int collision_parfaite_down(SDL_Surface *mask, SDL_Rect posjoueur)
 {

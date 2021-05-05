@@ -1,0 +1,11 @@
+<map id="perso.h" name="perso.h">
+<area shape="rect" id="node1" title="perso" alt="" coords="359,5,430,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="97,80,167,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="192,80,280,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="304,80,387,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="411,80,479,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="504,80,640,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="664,80,773,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="797,80,928,107"/>
+</map>

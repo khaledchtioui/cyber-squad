@@ -29,7 +29,7 @@ void remplir_fichier(char fichier_question[])
     if(fq==NULL) printf("erreur de l'ouverture");
     else
     {
-	fprintf(fq,"Les cellules sanguines sont elles fabriquees dans le coeur? \nAs-t-on plus de 100 millions de neurones dans notre cerveau? \nEst-ce que la peau est l'organe le plus lourd du corps humain? \nAs-t-on 20 vertebres dans notre colonnes vertebrale? \nL'estomac peut-il contenir 5 litres d'eau? \nUn adulte as-t-il 34 dents? \n");
+	fprintf(fq,"La Coccinelle a ete conçue par Porsche a la demande d Hitler? \nLe tableau le plus cher de l histoire est La Joconde? \nLe verbe positiver ete invente par carrefour? \nUn jour,Charlie Chaplin perdit un concours de sosies de lui-meme? \nMozart etait autrichien? \nle beret est d origine basque? \n");
 	fclose(fq);
     }
 }
@@ -38,7 +38,7 @@ void afficher_enigme(enigme *enig,int *ancienne,char fichier_question[],int *lig
    FILE *fq=NULL;
    int i,ici=0,taille=200,l;
    char ch[200];
-   SDL_Color couleur={0,255,0};
+   SDL_Color couleur={0,0,0};
    do
    {  ici=0;
       l=1+random()%6;
@@ -67,7 +67,7 @@ void afficher_enigme(enigme *enig,int *ancienne,char fichier_question[],int *lig
               	         }
                       }
   // enig->fenetre_enigme=SDL_SetVideoMode(1300,600,32,SDL_HWSURFACE | SDL_DOUBLEBUF);
-   enig->image=IMG_Load("labo.png");
+   enig->image=IMG_Load("enigme.png");
    enig->police=TTF_OpenFont("labo.ttf",60);
    fq=fopen(fichier_question,"r");
    if(fq==NULL) printf("erreur de l'ouverture");
@@ -92,22 +92,22 @@ int s=0;
     switch(q)
     {
     case 1:
-        s=2;
+        s=1;
         break;
     case 2:
-        s=1;
+        s=2;
         break;
     case 3:
         s=1;
         break;
     case 4:
-        s=2;
+        s=1;
         break;
     case 5:
         s=2;
         break;
     case 6:
-        s=1;
+        s=2;
         break;
     }
     return s;
@@ -124,11 +124,11 @@ int resolution(int *affiche)
     case SDL_KEYDOWN:
         switch(event.key.keysym.sym)
         {
-        case SDLK_a:
+        case SDLK_v:
             r=1;
 	    *affiche=1;
             break;
-        case SDLK_z:
+        case SDLK_f:
             r=2;
 	    *affiche=1;
             break;
@@ -144,14 +144,14 @@ void afficher_resultat(enigme *enig,int solution,int resolution,    SDL_Surface 
    
     if(solution==resolution)
     {
-        enig->image=IMG_Load("0.png");
+        enig->image=IMG_Load("youwin.png");
         SDL_BlitSurface(enig->image,NULL,fenetre_enigme,&(enig->posim));
         SDL_Flip(fenetre_enigme);
         //p->score=p->score+20;
     }
     else
     {
-        enig->image=IMG_Load("1.png");
+        enig->image=IMG_Load("youlost.png");
         SDL_BlitSurface(enig->image,NULL,fenetre_enigme,&(enig->posim));
         SDL_Flip(fenetre_enigme);
         //p->score=p-score-20;

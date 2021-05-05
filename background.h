@@ -8,6 +8,11 @@
 #include <SDL/SDL_mixer.h>
 #include "perso.h"
 
+/**
+* @struct background 
+* @brief structure background 
+
+*/
 typedef struct background
 {
 int x_relative,y_relative;
@@ -15,8 +20,13 @@ SDL_Surface *bg,*mask;
 SDL_Rect pos;
 SDL_Rect camera;
 }background;
+
+
 void initialiser_backround (background *b);
+
 void afficher_background (SDL_Surface *screen,background *b);
+
 void scrolling_right (background *b,perso *p,SDL_Surface *screen);
+
 void scrolling_left (background *b,perso *p,SDL_Surface *screen);
 
