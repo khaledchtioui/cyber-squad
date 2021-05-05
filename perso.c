@@ -1,8 +1,24 @@
+/**
+ * @file perco.c
+ * @brief perso 
+ * @author khaled chtioui
+ * @version 0.1
+ * @date 05/05/2021 
+
+*/
+
 #include "perso.h"
 #define GRAVITY 9.8
 
 #define MAX_JUMP_SPEED 20
 #define MAX_SPEED 17
+
+
+/**
+* @brief initialiser_perso
+* @param p perso
+* @return void 
+*/
 
 
 void initialiser_perso (perso *p){
@@ -96,11 +112,29 @@ p->fr=0;
     
 }
 */
-
+/**
+* @brief afficher_perso
+* @param screen the screen
+* @param p perso
+* @return void 
+*/
 void afficher_perso (perso *p,SDL_Surface *screen)
 {
   SDL_BlitSurface(p->frame,NULL,screen,&p->rect);
 }
+
+
+
+/**
+* @brief animation_right
+
+* @param p perso
+* @return void 
+*/
+
+
+
+
 
 void animation_right (perso *p)
 {
@@ -116,6 +150,16 @@ void animation_right (perso *p)
 //}
 
 }
+
+
+/**
+* @brief animation_left
+
+* @param p perso
+* @return void 
+*/
+
+
 
 void animation_left (perso *p){
 //if (p->speedX>7)
@@ -134,6 +178,13 @@ void animation_left (perso *p){
 }
 
 
+/**
+* @brief mouvementright
+
+* @param p perso
+* @return void 
+*/
+
 void mouvementright (perso *p)
 {
   
@@ -145,6 +196,15 @@ p->rect.x+=p->speedX;
 
 }
 }
+
+
+/**
+* @brief mouvementleft
+
+* @param p perso
+* @return void 
+*/
+
 
 void mouvementleft (perso *p)
 {
@@ -163,6 +223,16 @@ p->rect.x-=p->speedX;
 }
 
 
+
+/**
+* @brief jumpright
+
+* @param p perso
+* @return void 
+*/
+
+
+
 void jumpright (perso *p)
 {
 
@@ -177,6 +247,16 @@ p->rect.x+=p->speedX;
 }
 }
 
+
+/**
+* @brief jumpleft
+
+* @param p perso
+* @return void 
+*/
+
+
+
 void jumpleft (perso *p)
 {
 
@@ -186,6 +266,12 @@ p->rect.x-=p->speedX;
 //p->rect_relative.x-=p->speedX;
 }
 }
+
+/**
+* @brief initialiser_input 
+* @param I Input
+* @return void 
+*/
 
 void initialiser_input (Input *I)
 {
@@ -197,6 +283,14 @@ I->jump=0;
 }
 
 
+
+
+/**
+* @brief afficher_vie_hero
+* @param screen the screen
+* @param p perso
+* @return void 
+*/
 
 
 
@@ -233,6 +327,14 @@ if(p->viehero.nbre_vie<=0)
 
 
 
+/**
+* @brief afficher_score_hero
+* @param screen the screen
+* @param h perso
+* @return void 
+*/
+
+
 
 void afficher_score_hero(perso h,SDL_Surface *screen)
 { 
@@ -254,6 +356,14 @@ void afficher_score_hero(perso h,SDL_Surface *screen)
 }
 
 
+/**
+* @brief incrementer_scorehero
+
+* @param h perso
+* @return void 
+*/
+
+
 int incrementer_scorehero(perso h)
 {
      h.score.nbre_score++;
@@ -261,12 +371,28 @@ int incrementer_scorehero(perso h)
 return   h.score.nbre_score;
 }
 
+
+
+/**
+* @brief decrementer_scorehero
+
+* @param h perso
+* @return int 
+*/
+
+
 int decrementer_scorehero(perso h)
 {
      h.score.nbre_score--;
 
 return   h.score.nbre_score;
 }
+/**
+* @brief incrementer_viehero
+
+* @param h perso
+* @return int 
+*/
 int incrementer_viehero(perso h)
 {
    h.viehero.nbre_vie++;
@@ -274,7 +400,12 @@ int incrementer_viehero(perso h)
 
 return  h.viehero.nbre_vie;
 }
+/**
+* @brief decrementer_viehero
 
+* @param h perso
+* @return int 
+*/
 
 int decrementer_viehero(perso h)
 {
@@ -283,6 +414,17 @@ int decrementer_viehero(perso h)
 
 return  h.viehero.nbre_vie;
 }
+
+
+
+/**
+* @brief gagner
+* @param poscoin sdl_rect
+* @param h perso
+* @return int 
+*/
+
+
 int gagner(perso h,SDL_Rect poscoin)
 {
    int gagner;

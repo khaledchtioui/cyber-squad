@@ -1,3 +1,12 @@
+/**
+ * @file load.c
+ * @brief load 
+ * @author khaled chtioui
+ * @version 0.1
+ * @date 05/05/2021 
+
+*/
+
 #include "perso.h"
 #include "background.h"
 #include "load.h"
@@ -8,6 +17,16 @@
 #define GRAVITY 10
 #define SPEED 5
 #define MAX_SPEED 30
+
+
+
+
+
+/**
+* @brief load
+* @param screen the surface
+* @return void 
+*/
 
 
 

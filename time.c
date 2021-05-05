@@ -1,9 +1,9 @@
 /**
-* @file time.c
-* @brief time libs
-* @author Raed
-* @version 1.0
-* @date 07/06/2020
+ * @file time.c
+ * @brief time 
+ * @author khaled chtioui
+ * @version 0.1
+ * @date 05/05/2021 
 
 */
 #include <stdlib.h> 
@@ -15,6 +15,18 @@
 #include <time.h>
 
 #include "time.h"
+
+
+
+/**
+* @brief timer
+* @param screen the surface
+* @param t float
+* @return void 
+*/
+
+
+
 
 void timer(SDL_Surface *screen , float t)
 {    Uint32 time ,tim ;
