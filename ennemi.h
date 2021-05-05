@@ -16,7 +16,7 @@ typedef struct enemie
 	SDL_Rect pos,xminimale,xmaximale;
 	SDL_Rect posspritesheet;
 	}enemie;
-
+void init_enemie2(enemie * E) ;
 void init_enemie (enemie *E);
 void afficher_enemie (enemie *E,SDL_Surface *screen);
 void animate_enemie (enemie *E);

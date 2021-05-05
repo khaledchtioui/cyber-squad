@@ -24,6 +24,7 @@
 #include "perso.h"
 #include "background.h"
 #include "time.h"
+#include "sss.h"
 
 
 void load (SDL_Surface *screen )  ; 

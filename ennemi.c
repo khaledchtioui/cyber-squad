@@ -1,10 +1,32 @@
 #include "ennemi.h"
 
+
+
+void init_enemie2(enemie * E) {
+
+  E -> spritesheet = IMG_Load("hero_spr.png");
+  E -> pos.x = 700;
+  E -> pos.y = 400;
+  E -> direction = 0;
+
+  E -> posspritesheet.x = 0;
+  E -> posspritesheet.y = 0;
+  E -> posspritesheet.h = 100;
+  E -> posspritesheet.w = 100;
+
+  E -> xminimale.x = 500;
+  E -> xmaximale.x = 700;
+
+}
+
+
+
+
 void init_enemie(enemie * E) {
 
   E -> spritesheet = IMG_Load("hero_spr.png");
   E -> pos.x = 700;
-  E -> pos.y = 700;
+  E -> pos.y = 783;
   E -> direction = 0;
 
   E -> posspritesheet.x = 0;

@@ -12,8 +12,8 @@ void init_enigme(enigme *enig,int ancienne[])
     SDL_Init(SDL_INIT_VIDEO);
     TTF_Init();
     enig->image=NULL;
-    enig->posim.x=50;
-    enig->posim.y=130;
+    enig->posim.x=0;
+    enig->posim.y=0;
     enig->post.x=170;
     enig->post.y=180;
     for(i=0;i<6;i++)

@@ -6,7 +6,7 @@
  * @date 05/05/2021 
 
 */
-
+#include "sss.h"
 #include "perso.h"
 #include "background.h"
 #include "load.h"
@@ -67,7 +67,7 @@ mask=IMG_Load("mask.png");
 background b;
 Input I,I2;
 perso p ,p2;
-  enemie E,EE;
+  enemie E,EE,en;
 SDL_Event event;
 initialiser_perso (&p);
 //initialiser_perso2 (&p2);
@@ -76,6 +76,7 @@ initialiser_input (&I2);
 initialiser_backround (&b);
  init_enemie( & E);
   init_enemie( & EE);
+  init_enemie( & en);
 init_map(&m);
 bool running=true;
 
@@ -122,7 +123,7 @@ while(SDL_PollEvent(&event))
       		break;
 			case SDLK_SPACE :
 				I.jump=1;
-				if(p.rect.y==525)//
+				if(p.rect.y==650)//
 				p.speedY = -110;
 
 
@@ -209,7 +210,7 @@ while(SDL_PollEvent(&event))
 {
 	//p.speedX+=1;
 	animation_right(&p);
-	if    ( (I.jump==0)&& ((p.rect.x<700)||((b.camera.x>5000)&&(b.camera.x<6070))) )  // &&   (  collision_parfaite_right(mask,posJoueurABS)==0)  )
+	if  (  ( (I.jump==0)&& ((p.rect.x<650)||((b.camera.x>5000)&&(b.camera.x<6070))) )  &&(  collision_parfaite_right(mask,posJoueurABS)==0)  )
 	{
 	
 	
@@ -266,9 +267,9 @@ p.speedY+=GRAVITY;
  //if (collision_parfaite_down(mask, posJoueurABS)==0) 
  p.rect.y += p.speedY;
  //p.rect_relative.y += p.speedY;
- if(p.rect.y >= 525)
+ if(p.rect.y >= 650)
  	 {
- 		 p.rect.y= 525;
+ 		 p.rect.y= 650;
 		// p.rect_relative.y= ground;
  		 p.speedY = 0;
          }
@@ -300,6 +301,11 @@ p.speedY+=GRAVITY;
                    
                    }
 
+
+
+
+
+
 	afficher_background(screen,&b);
 	afficher_perso (&p,screen);
 	     afficher_vie_hero(&p,screen);
@@ -312,6 +318,10 @@ p.speedY+=GRAVITY;
 	timer(screen  ,t) ; 
 	//if(b.camera.x<600)
 	//{
+	
+
+	
+	
 	E.pos.x=EE.pos.x-b.camera.x         ;
     afficher_enemie( & E, screen);
     animate_enemie( & E);
@@ -328,8 +338,22 @@ p.speedY+=GRAVITY;
     {
 p.viehero.nbre_vie= decrementer_viehero( p)  ;
     }
+    if((b.camera.x>4000))
+    {
+        	afficher_enemie( & en, screen);
+        animate_enemie( & en);
+        if ((((E.pos.x - p.rect.x) < 200) && ((E.pos.x - p.rect.x) > -200))) 
+    {
+      deplacerIA( & E, p.rect);
+    } else  
+     {
     
     
+      deplacer( & E);
+    }
+        
+        
+    }
     
     
    // }
@@ -381,7 +405,8 @@ SDL_Delay(1006);
 }
 
 
-
+if(p.rect.x>1100)
+sss(screen);
 
 
 
