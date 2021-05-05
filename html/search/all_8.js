@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['minimap_22',['minimap',['../structminimap.html',1,'']]],
-  ['mouvementleft_23',['mouvementleft',['../perso_8h.html#a43dbd8a30f85debe7437b2c5aad1ad3a',1,'perso.c']]],
-  ['mouvementright_24',['mouvementright',['../perso_8h.html#a740a60299ea7837174fe9a2b1c7fbe03',1,'perso.c']]]
+  ['life_29',['life',['../structlife.html',1,'']]],
+  ['load_30',['load',['../load_8c.html#a5c6c7f2afdd8508fab7968e206ec7105',1,'load(SDL_Surface *screen):&#160;load.c'],['../load_8h.html#a5c6c7f2afdd8508fab7968e206ec7105',1,'load(SDL_Surface *screen):&#160;load.c']]],
+  ['load_2ec_31',['load.c',['../load_8c.html',1,'']]],
+  ['load_2eh_32',['load.h',['../load_8h.html',1,'']]]
 ];

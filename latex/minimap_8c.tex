@@ -1,0 +1,100 @@
+\hypertarget{minimap_8c}{}\doxysection{minimap.\+c File Reference}
+\label{minimap_8c}\index{minimap.c@{minimap.c}}
+
+
+mini map  
+
+
+{\ttfamily \#include \char`\"{}minimap.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\newline
+Include dependency graph for minimap.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{minimap_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{minimap_8c_a74ec4a47290d0f4cb6091de5aa33e0fa}{init\+\_\+map}} (\mbox{\hyperlink{structminimap}{minimap}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em init\+\_\+map \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{minimap_8c_a77aa7e86d57acad18282831dfcfe6a17}{M\+A\+J\+Minimap}} (S\+D\+L\+\_\+\+Rect pos\+Joueur, \mbox{\hyperlink{structminimap}{minimap}} $\ast$m, S\+D\+L\+\_\+\+Rect camera, int redimensionnement)
+\begin{DoxyCompactList}\small\item\em M\+A\+J\+Minimap @pos\+Joueur position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{minimap_8c_ac75923f5bb04a245e166a6d5a9abd710}{afficherminimap}} (\mbox{\hyperlink{structminimap}{minimap}} m, S\+D\+L\+\_\+\+Surface $\ast$screen)
+\begin{DoxyCompactList}\small\item\em afficherminimap \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+mini map 
+
+\begin{DoxyAuthor}{Author}
+youssef gharrad 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05/05/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{minimap_8c_ac75923f5bb04a245e166a6d5a9abd710}\label{minimap_8c_ac75923f5bb04a245e166a6d5a9abd710}} 
+\index{minimap.c@{minimap.c}!afficherminimap@{afficherminimap}}
+\index{afficherminimap@{afficherminimap}!minimap.c@{minimap.c}}
+\doxysubsubsection{\texorpdfstring{afficherminimap()}{afficherminimap()}}
+{\footnotesize\ttfamily void afficherminimap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structminimap}{minimap}}}]{m,  }\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{screen }\end{DoxyParamCaption})}
+
+
+
+afficherminimap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & minimap \\
+\hline
+{\em screen} & the screen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a74ec4a47290d0f4cb6091de5aa33e0fa}\label{minimap_8c_a74ec4a47290d0f4cb6091de5aa33e0fa}} 
+\index{minimap.c@{minimap.c}!init\_map@{init\_map}}
+\index{init\_map@{init\_map}!minimap.c@{minimap.c}}
+\doxysubsubsection{\texorpdfstring{init\_map()}{init\_map()}}
+{\footnotesize\ttfamily void init\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structminimap}{minimap}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+init\+\_\+map 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & minimap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{minimap_8c_a77aa7e86d57acad18282831dfcfe6a17}\label{minimap_8c_a77aa7e86d57acad18282831dfcfe6a17}} 
+\index{minimap.c@{minimap.c}!MAJMinimap@{MAJMinimap}}
+\index{MAJMinimap@{MAJMinimap}!minimap.c@{minimap.c}}
+\doxysubsubsection{\texorpdfstring{MAJMinimap()}{MAJMinimap()}}
+{\footnotesize\ttfamily void M\+A\+J\+Minimap (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Rect}]{pos\+Joueur,  }\item[{\mbox{\hyperlink{structminimap}{minimap}} $\ast$}]{m,  }\item[{S\+D\+L\+\_\+\+Rect}]{camera,  }\item[{int}]{redimensionnement }\end{DoxyParamCaption})}
+
+
+
+M\+A\+J\+Minimap @pos\+Joueur position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & minimap @pos\+Joueur camera \\
+\hline
+{\em redimensionnement} & int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

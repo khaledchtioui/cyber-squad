@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['load_58',['load',['../load_8c.html#a5c6c7f2afdd8508fab7968e206ec7105',1,'load(SDL_Surface *screen):&#160;load.c'],['../load_8h.html#a5c6c7f2afdd8508fab7968e206ec7105',1,'load(SDL_Surface *screen):&#160;load.c']]]
+  ['jumpleft_83',['jumpleft',['../perso_8h.html#a5d82b043dba34de7e53af9f4f61e4b80',1,'perso.c']]],
+  ['jumpright_84',['jumpright',['../perso_8h.html#aee4f007457927312af30d982c4ff56cc',1,'perso.c']]]
 ];

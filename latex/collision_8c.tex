@@ -1,0 +1,150 @@
+\hypertarget{collision_8c}{}\doxysection{collision.\+c File Reference}
+\label{collision_8c}\index{collision.c@{collision.c}}
+
+
+la collision  
+
+
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}collision.\+h\char`\"{}}\newline
+Include dependency graph for collision.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{collision_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Color \mbox{\hyperlink{collision_8c_a9ec79b71532402381966fc93325d3e52}{Get\+Pixel}} (S\+D\+L\+\_\+\+Surface $\ast$p\+Surface, int x, int y)
+\begin{DoxyCompactList}\small\item\em Get\+Pixel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{collision_8c_a99bb97c448c89535a8fcd9ff7b5c2f65}{collision\+\_\+parfaite\+\_\+right}} (S\+D\+L\+\_\+\+Surface $\ast$mask, S\+D\+L\+\_\+\+Rect posjoueur)
+\begin{DoxyCompactList}\small\item\em collision\+\_\+parfaite\+\_\+right \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{collision_8c_a8e3fdac312b53700627d32603bd4e742}{collision\+\_\+parfaite\+\_\+left}} (S\+D\+L\+\_\+\+Surface $\ast$mask, S\+D\+L\+\_\+\+Rect posjoueur)
+\begin{DoxyCompactList}\small\item\em collision\+\_\+parfaite\+\_\+left \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{collision_8c_a393f487190fc328c09745550b399beb8}{collision\+\_\+parfaite\+\_\+up}} (S\+D\+L\+\_\+\+Surface $\ast$mask, S\+D\+L\+\_\+\+Rect posjoueur)
+\begin{DoxyCompactList}\small\item\em collision\+\_\+parfaite\+\_\+up \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{collision_8c_a2c0bb81a16e589dc6fa155d8032afc04}{collision\+\_\+parfaite\+\_\+down}} (S\+D\+L\+\_\+\+Surface $\ast$mask, S\+D\+L\+\_\+\+Rect posjoueur)
+\begin{DoxyCompactList}\small\item\em collision\+\_\+parfaite\+\_\+down \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+la collision 
+
+\begin{DoxyAuthor}{Author}
+idriss ben younes 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05/05/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{collision_8c_a2c0bb81a16e589dc6fa155d8032afc04}\label{collision_8c_a2c0bb81a16e589dc6fa155d8032afc04}} 
+\index{collision.c@{collision.c}!collision\_parfaite\_down@{collision\_parfaite\_down}}
+\index{collision\_parfaite\_down@{collision\_parfaite\_down}!collision.c@{collision.c}}
+\doxysubsubsection{\texorpdfstring{collision\_parfaite\_down()}{collision\_parfaite\_down()}}
+{\footnotesize\ttfamily int collision\+\_\+parfaite\+\_\+down (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{mask,  }\item[{S\+D\+L\+\_\+\+Rect}]{posjoueur }\end{DoxyParamCaption})}
+
+
+
+collision\+\_\+parfaite\+\_\+down 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & the screen \\
+\hline
+{\em posjoueur} & position joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision_8c_a8e3fdac312b53700627d32603bd4e742}\label{collision_8c_a8e3fdac312b53700627d32603bd4e742}} 
+\index{collision.c@{collision.c}!collision\_parfaite\_left@{collision\_parfaite\_left}}
+\index{collision\_parfaite\_left@{collision\_parfaite\_left}!collision.c@{collision.c}}
+\doxysubsubsection{\texorpdfstring{collision\_parfaite\_left()}{collision\_parfaite\_left()}}
+{\footnotesize\ttfamily int collision\+\_\+parfaite\+\_\+left (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{mask,  }\item[{S\+D\+L\+\_\+\+Rect}]{posjoueur }\end{DoxyParamCaption})}
+
+
+
+collision\+\_\+parfaite\+\_\+left 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & the screen \\
+\hline
+{\em posjoueur} & position joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision_8c_a99bb97c448c89535a8fcd9ff7b5c2f65}\label{collision_8c_a99bb97c448c89535a8fcd9ff7b5c2f65}} 
+\index{collision.c@{collision.c}!collision\_parfaite\_right@{collision\_parfaite\_right}}
+\index{collision\_parfaite\_right@{collision\_parfaite\_right}!collision.c@{collision.c}}
+\doxysubsubsection{\texorpdfstring{collision\_parfaite\_right()}{collision\_parfaite\_right()}}
+{\footnotesize\ttfamily int collision\+\_\+parfaite\+\_\+right (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{mask,  }\item[{S\+D\+L\+\_\+\+Rect}]{posjoueur }\end{DoxyParamCaption})}
+
+
+
+collision\+\_\+parfaite\+\_\+right 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & the screen \\
+\hline
+{\em posjoueur} & position joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision_8c_a393f487190fc328c09745550b399beb8}\label{collision_8c_a393f487190fc328c09745550b399beb8}} 
+\index{collision.c@{collision.c}!collision\_parfaite\_up@{collision\_parfaite\_up}}
+\index{collision\_parfaite\_up@{collision\_parfaite\_up}!collision.c@{collision.c}}
+\doxysubsubsection{\texorpdfstring{collision\_parfaite\_up()}{collision\_parfaite\_up()}}
+{\footnotesize\ttfamily int collision\+\_\+parfaite\+\_\+up (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{mask,  }\item[{S\+D\+L\+\_\+\+Rect}]{posjoueur }\end{DoxyParamCaption})}
+
+
+
+collision\+\_\+parfaite\+\_\+up 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & the screen \\
+\hline
+{\em posjoueur} & position joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{collision_8c_a9ec79b71532402381966fc93325d3e52}\label{collision_8c_a9ec79b71532402381966fc93325d3e52}} 
+\index{collision.c@{collision.c}!GetPixel@{GetPixel}}
+\index{GetPixel@{GetPixel}!collision.c@{collision.c}}
+\doxysubsubsection{\texorpdfstring{GetPixel()}{GetPixel()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Color Get\+Pixel (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{p\+Surface,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Get\+Pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Surface} & the screen \\
+\hline
+{\em x} & int \\
+\hline
+{\em y} & int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+Color 
+\end{DoxyReturn}
