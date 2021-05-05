@@ -41,12 +41,17 @@ int ii =2 ;
  // posJoueurABS.x = 1281;
  // posJoueurABS.y = 0;
 
-SDL_Surface *coin,*gameover;
+SDL_Surface *coin,*gameover,*potion;
+potion=IMG_Load("potion03.png");
 gameover=IMG_Load("Game over.jpg");
 coin=IMG_Load("coin.png");
-SDL_Rect poscoin   ,poscoinn,ppp;
+SDL_Rect poscoin   ,poscoinn,ppp,por,porr;
 ppp.x=0;
 ppp.y=0;
+por.x=900;
+por.y=670;
+porr.x=900;
+porr.y=670;
 poscoin.x=350;
 poscoin.y=670;
 poscoinn.y=670;
@@ -224,7 +229,7 @@ while(SDL_PollEvent(&event))
 	
 	
 	}
-	 else if (I.jump==1) // &&   (  collision_parfaite_right(mask,posJoueurABS)==0)  )
+	 else if ((I.jump==1)  &&   (  collision_parfaite_right(mask,posJoueurABS)==0)  )
 	 {jumpright (&p);}
          scrolling_right (&b,&p,screen);
          
@@ -358,12 +363,13 @@ p.viehero.nbre_vie= decrementer_viehero( p)  ;
     
    // }
 
+
     	
     	    poscoinn.x=poscoin.x - b.camera.x  ; 
     	
     SDL_BlitSurface(coin,NULL,screen,&poscoinn);
-    
-    
+        	    porr.x=por.x - b.camera.x  ; 
+        SDL_BlitSurface(potion,NULL,screen,&porr);
      
  
     
@@ -372,6 +378,15 @@ if( gagner(p,poscoinn)    )
  coin=NULL;
  poscoin.x=11111;
  }
+
+    
+if( gagner(p,porr)    ) 
+ {
+p.score.nbre_score+=100;
+ potion=NULL;
+ por.x=11111;
+ }
+
 
 
 
